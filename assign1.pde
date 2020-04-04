@@ -6,8 +6,8 @@ void setup() {
   image((bg = loadImage("img/bg.jpg")),0,0);
   soil = loadImage("img/soil.png");
   image(life = loadImage("img/life.png"),10,10);
-  image(life = loadImage("img/life.png"),70,10);
-  image(life = loadImage("img/life.png"),130,10);
+  image(life = loadImage("img/life.png"),80,10);
+  image(life = loadImage("img/life.png"),150,10);
   robot = loadImage("img/robot.png");
   groundhog = loadImage("img/groundhog.png");
   soldier = loadImage("img/soldier.png");
