@@ -34,6 +34,8 @@ void draw() {
     }
   strokeWeight(10);
   stroke(255, 0, 0);
+  //set Robot
+  image(robot, robotX, robotY);
   //Robot's shoot
   line(laserX - laser, laserY, laserX - laser + laserWidth, laserY);
   laserWidth += laserSpeed;
@@ -48,6 +50,4 @@ void draw() {
     laserWidth = laser = 0;
   }
   image(soldier, soldierX, soldierY);
-  //set Robot
-  image(robot, robotX, robotY);
 }
