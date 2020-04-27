@@ -3,16 +3,21 @@ float soldierX=random(-80,480), soldierY = 80 * 2 + (floor(random(4)) * 80), rob
 void setup() {
   noStroke();
   size(640, 480, P2D);
+  //set backGround
   image((bg = loadImage("img/bg.jpg")),0,0);
+  //set Soil
   soil = loadImage("img/soil.png");
+  //set Life
   image(life = loadImage("img/life.png"),10,10);
   image(life = loadImage("img/life.png"),80,10);
   image(life = loadImage("img/life.png"),150,10);
   robot = loadImage("img/robot.png");
   groundhog = loadImage("img/groundhog.png");
   soldier = loadImage("img/soldier.png");
+  //set Grass
   fill(124, 204, 25);
   rect(0, 145, 640, 15);
+  //set Sun
   fill(255, 255, 0);
   ellipse(590, 50, 125, 125);
   fill(253, 184, 19);
@@ -20,13 +25,16 @@ void setup() {
 }
 void draw() {
   image(soil, 0, 160);
+  //set Groundhog
   image(groundhog, 280, 80);
+  //set walkingSoilder
     soldierX = soldierX + 3;
     if (soldierX > 640) {
       soldierX = -80;
     }
   strokeWeight(10);
   stroke(255, 0, 0);
+  //Robot's shoot
   line(laserX - laser, laserY, laserX - laser + laserWidth, laserY);
   laserWidth += laserSpeed;
   laser += 2;
@@ -40,5 +48,6 @@ void draw() {
     laserWidth = laser = 0;
   }
   image(soldier, soldierX, soldierY);
+  //set Robot
   image(robot, robotX, robotY);
 }
